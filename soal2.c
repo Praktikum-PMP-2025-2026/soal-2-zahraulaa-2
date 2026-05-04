@@ -1,4 +1,11 @@
-#include<stdio.h>
+// EL2008 Praktikum Pemecahan Masalah dengan Pemrograman 2024/2025
+// Modul               : 4
+// Hari dan Tanggal    : Senin, 4 Mei 2026
+// Nama (NIM)          : Zahra Aulia (13224007)
+// Nama File           : soal2.c
+// Deskripsi           : Program menggabungkan dua buah linked list yang sudah terururt kemudia mengurutkannya lagi
+
+#include <stdio.h>
 #include <stdlib.h>
 
 struct Node {
@@ -44,8 +51,15 @@ void displayList(struct Node* head) {
 }
 
 int main() {
-    struct Node* list1;
-    struct Node* list2;
+    struct Node* list1 = new_Node(1);
+    list1->next = new_Node(3);
+    list1->next->next = new_Node(5);
+    list1->next->next->next = new_Node(7);
+
+    struct Node* list2 = new_Node(3);
+    list2->next = new_Node(4);
+    list2->next->next = new_Node(6);
+
 	struct Node* result = mergeTwoLists(list1, list2);
 	printf("\n");
     displayList(result);
