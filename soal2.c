@@ -42,27 +42,32 @@ struct Node* mergeTwoLists(struct Node* head1, struct Node* head2) {
     return temp.next;
 }
 
-void displayList(struct Node* head) {
+void display(struct Node* head) {
+    if (head == NULL) { 
+        printf("MERGED EMPTY");
+    } else {
+    struct Node *temp = head;
     while (head) {
         printf("%d ", head->data);
         head = head->next;
     }
     printf("\n");
+    }
 }
 
 int main() {
-    struct Node* list1 = new_Node(1);
-    list1->next = new_Node(3);
-    list1->next->next = new_Node(5);
-    list1->next->next->next = new_Node(7);
-
-    struct Node* list2 = new_Node(3);
-    list2->next = new_Node(4);
-    list2->next->next = new_Node(6);
+    struct Node *list1, *list2;
+    int n, m;
+    scanf("%d %d %d %d",n, &list1, m, &list2);
 
 	struct Node* result = mergeTwoLists(list1, list2);
-	printf("\n");
-    displayList(result);
+    display(result);
 
     return 0;
 }
+
+/* REFERENSI
+1. https://www.w3resource.com/c-programming-exercises/linked_list/c-linked_list-exercise-35.php
+2. https://stackoverflow.com/questions/2348374/merging-two-sorted-linked-lists
+3. https://www.youtube.com/watch?v=zzk9BQro7bA
+*/
