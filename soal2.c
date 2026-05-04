@@ -81,3 +81,10 @@ int main() {
     display(result);
     return 0;
 }
+
+/* REFERENSI
+1. https://www.w3resource.com/c-programming-exercises/linked_list/c-linked_list-exercise-35.php
+2. https://stackoverflow.com/questions/2348374/merging-two-sorted-linked-lists
+3. https://www.youtube.com/watch?v=zzk9BQro7bA
+4. https://www.scribd.com/document/809210447/SLL-c-program
+*/
