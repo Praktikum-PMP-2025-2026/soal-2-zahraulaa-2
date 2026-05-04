@@ -44,17 +44,10 @@ void displayList(struct Node* head) {
 }
 
 int main() {
-    struct Node* list1 = new_Node(1);
-    list1->next = new_Node(3);
-    list1->next->next = new_Node(5);
-    list1->next->next->next = new_Node(7);
-
-    struct Node* list2 = new_Node(3);
-    list2->next = new_Node(4);
-    list2->next->next = new_Node(6);
-
+    struct Node* list1;
+    struct Node* list2;
 	struct Node* result = mergeTwoLists(list1, list2);
-	printf("\nAfter merging the said two sorted lists:\n");
+	printf("\n");
     displayList(result);
 
     return 0;
