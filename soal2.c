@@ -74,7 +74,7 @@ struct Node* createlist(int n) {
 
 int main() {
     int n, m;
-    if (scanf("%d %d", &n, &m) != 2) return 0;
+    scanf("%d %d", &n, &m);
     struct Node* list1 = createlist(n);
     struct Node* list2 = createlist(m);
     struct Node* result = mergelists(list1, list2);
